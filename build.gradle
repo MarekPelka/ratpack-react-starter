@@ -21,3 +21,33 @@ dependencies {
 }
 
 mainClassName = "pl.conexus.Main"
+
+def frontedDir = "$projectDir/src/main/frontend/"
+
+task appNpmInstall(type: Exec) {
+  workingDir "$frontedDir"
+  commandLine 'npm', 'install'
+}
+
+task appNpmBuild(type: Exec) {
+  workingDir "$frontedDir"
+  commandLine 'npm', 'run', 'build'
+}
+
+task copyFrontend(type: Copy) {
+  from "$frontedDir/build"
+  into "build/resources/main/static/."
+}
+
+// TODO: Perhaps this file can be created by gradle and use DEFAULT_BASE_DIR_MARKER_FILE_PATH for name.
+task copyMarker(type: Copy) {
+  from "$projectDir/.ratpack"
+  into "build/resources/main/"
+}
+
+// TODO: Migrate npm tasks to NpmTask
+// https://blog.indrek.io/articles/serving-react-apps-from-spring-boot/
+//appNpmBuild.dependsOn appNpmInstall
+copyFrontend.dependsOn appNpmBuild
+shadowJar.dependsOn copyFrontend
+shadowJar.dependsOn copyMarker

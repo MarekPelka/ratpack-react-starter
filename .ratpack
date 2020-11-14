@@ -1,0 +1,2 @@
+This is just a marker file that allows ratpack to find a root of a jar.
+https://ratpack.io/manual/current/api/ratpack/server/BaseDir.html
