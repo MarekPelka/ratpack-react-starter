@@ -11,12 +11,16 @@ buildscript {
 apply plugin: "io.ratpack.ratpack-java"
 apply plugin: "idea"
 apply plugin: "com.github.johnrengelman.shadow"
+apply from: 'versions.gradle'
 
 repositories {
   jcenter()
+  mavenCentral()
 }
 
 dependencies {
+  compile "org.hibernate:hibernate-core:$hibernateCoreVersion"
+  compile "com.h2database:h2:$h2DbVersion"
   runtime "org.slf4j:slf4j-simple:1.7.30"
 }
 

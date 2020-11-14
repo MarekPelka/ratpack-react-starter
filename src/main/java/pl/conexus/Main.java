@@ -1,5 +1,10 @@
 package pl.conexus;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import pl.conexus.user.User;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
 
@@ -40,6 +45,17 @@ public class Main {
 		} else {
 			staticPath = BaseDir.find().getRoot().resolve("static");
 		}
+
+		//TODO propper place session factory initialization and add separate mechanism for demo data loading during startup
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		User u = new User();
+		u.setId(1);
+		u.setName("Marek");
+		session.save(u);
+		transaction.commit();
+		session.close();
 
 		RatpackServer.start(server -> server
 				.serverConfig(c -> c.baseDir(staticPath))

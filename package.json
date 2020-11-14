@@ -1,7 +1,7 @@
 {
   "name": "",
   "scripts": {
-    "postinstall": "cd frontend && npm install",
+    "postinstall": "cd src/main/frontend && npm install",
     "start": "npm-run-all --print-label --parallel start:**",
     "start:frontend": "cd src/main/frontend && npm start",
     "start:backend": "./gradlew run --continuous",
