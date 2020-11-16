@@ -8,15 +8,16 @@ import java.util.List;
 
 public interface DemoDataLoader {
     // see hibernate.jdbc.batch_size
-    int BATCH_SIZE = 20;
+    byte BATCH_SIZE = 20;
 
     void loadData();
 
+    //TODO it would be worth to test if it is really working https://frightanic.com/software-development/jpa-batch-inserts/
     default void batchLoad(List<? extends Object> entities, SessionFactory sessionFactory) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        short batchCounter = 0;
+        byte batchCounter = 0;
         for (Object e : entities) {
             session.save(e);
             batchCounter++;

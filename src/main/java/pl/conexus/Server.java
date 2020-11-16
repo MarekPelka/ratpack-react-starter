@@ -4,6 +4,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import pl.conexus.foundation.DemoDataLoader;
 import pl.conexus.user.UserModule;
+import ratpack.func.Action;
+import ratpack.handling.Chain;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
 
@@ -12,8 +14,6 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
-
-import static ratpack.jackson.Jackson.json;
 
 class Server {
 
@@ -30,10 +30,7 @@ class Server {
     void start() throws Exception {
         RatpackServer.start(server -> server
                 .serverConfig(c -> c.baseDir(staticPath))
-                .handlers(chain -> chain
-                        .get(":name", ctx -> ctx.render(json(new Main.Person(ctx.getPathTokens().get("name")))))
-                        .files(f -> f.indexFiles("index.html"))
-                )
+                .handlers(makeApi(defineApi()))
         );
     }
 
@@ -42,6 +39,7 @@ class Server {
         boolean isDevelopmentMode = Boolean.parseBoolean(System.getProperty("ratpack.development"));
         printInfo(isDevelopmentMode);
 
+        //we should keep one session factory per application
         sessionFactory = new Configuration().configure().buildSessionFactory();
         initializeModules(isDevelopmentMode);
     }
@@ -57,6 +55,17 @@ class Server {
         if (isDevelopmentMode) {
             loadDemoData(userModule.userDemoDataLoader());
         }
+    }
+
+    private static Action<Chain> makeApi(Action<Chain> handlers) {
+        return chain -> chain.prefix("api", handlers);
+    }
+
+    private Action<Chain> defineApi() {
+        return apiChain -> apiChain
+                .insert(userModule.userApi())
+                //some other api from different module .insert(gamesService.gamesApi())
+                ;
     }
 
     private void loadDemoData(DemoDataLoader... demoDataLoader) {

@@ -3,25 +3,25 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="user")
-class User {
+public class User {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="id")
-    private int id;
+    private Integer id;
 
     @Column(name="name")
     private String name;
 
-    int getId() {
+    public Integer getId() {
         return id;
     }
 
-    void setId(int id) {
+    void setId(Integer id) {
         this.id = id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
