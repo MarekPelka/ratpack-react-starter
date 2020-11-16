@@ -8,16 +8,23 @@ import pl.conexus.user.User;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
 
+import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import org.h2.Driver;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.h2.tools.Server;
+
+import static java.lang.String.format;
 import static ratpack.jackson.Jackson.json;
 
 public class Main {
 
-    public static class Person {
+	public static class Person {
 		private final String name;
 
 		public Person(String name) {
@@ -31,7 +38,7 @@ public class Main {
 
 	public static void main(String... args) throws Exception {
 
-    	// https://ratpack.io/manual/current/gradle.html#running_the_application
+		// https://ratpack.io/manual/current/gradle.html#running_the_application
 		boolean isDevelopmentMode = Boolean.parseBoolean(System.getProperty("ratpack.development"));
 
 		Path staticPath;

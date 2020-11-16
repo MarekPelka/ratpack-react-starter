@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+
+.full-height {
+	margin: 0;
+	display: flex;
+	min-height: 100vh;
+}
+
+.height-75 {
+	height: 75%;
+}
+
+.menu {
+	height: 100%;
+	position: relative;
+}
+
+.menu-bottom {
+	bottom: 0;
+	position: absolute;
+}
+
+.column-footer {
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+}
+
+.stars > div{
+	width: $icon-dimensions * 5;
+}
+
+.stars-wrapper {
+	white-space: nowrap;
+	display: flex;
+}
+
+.product-description {
+	padding-top: 9rem;
+}

@@ -26,20 +26,20 @@ dependencies {
 
 mainClassName = "pl.conexus.Main"
 
-def frontedDir = "$projectDir/src/main/frontend/"
+def frontendDir = "$projectDir/src/main/frontend/"
 
 task appNpmInstall(type: Exec) {
-  workingDir "$frontedDir"
+  workingDir "$frontendDir"
   commandLine 'npm', 'install'
 }
 
 task appNpmBuild(type: Exec) {
-  workingDir "$frontedDir"
+  workingDir "$frontendDir"
   commandLine 'npm', 'run', 'build'
 }
 
 task copyFrontend(type: Copy) {
-  from "$frontedDir/build"
+  from "$frontendDir/build"
   into "build/resources/main/static/."
 }
 
@@ -54,4 +54,5 @@ task copyMarker(type: Copy) {
 //appNpmBuild.dependsOn appNpmInstall
 copyFrontend.dependsOn appNpmBuild
 shadowJar.dependsOn copyFrontend
+shadowJar.dependsOn copyMarker
 shadowJar.dependsOn copyMarker
