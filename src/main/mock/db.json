@@ -1,0 +1,23 @@
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some commenttt4", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" },
+
+
+
+  "ceidg": [
+    {
+      "company": "BETTER YOU MAGDALENA XYZ",
+      "nip": 8542121839,
+      "regon": 361927889,
+      "name": "Jan",
+      "surname": "Kowalski",
+      "mainpkd": "47.82.Z",
+      "mainpkddesc": "Sprzedaż detaliczna wyrobów tekstylnych, odzieży i obuwia prowadzona na straganach i targowiskach"
+    }
+  ]
+}

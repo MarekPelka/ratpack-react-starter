@@ -5,9 +5,11 @@
     "start": "npm-run-all --print-label --parallel start:**",
     "start:frontend": "cd src/main/frontend && npm start",
     "start:backend": "./gradlew run --continuous",
-    "build": "./gradlew shadowJar"
+    "build": "./gradlew shadowJar",
+    "json-server": "json-server --watch src/main/mock/db.json"
   },
   "dependencies": {
+    "json-server": "^0.16.3",
     "npm-run-all": "^4.1.5"
   }
 }
