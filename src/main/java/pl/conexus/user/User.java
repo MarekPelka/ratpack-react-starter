@@ -3,7 +3,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="user")
-public class User {
+class User {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -13,7 +13,7 @@ public class User {
     @Column(name="name")
     private String name;
 
-    public Integer getId() {
+    Integer getId() {
         return id;
     }
 
@@ -21,7 +21,7 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 

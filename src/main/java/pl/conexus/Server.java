@@ -3,6 +3,7 @@ package pl.conexus;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import pl.conexus.foundation.DemoDataLoader;
+import pl.conexus.product.ProductModule;
 import pl.conexus.user.UserModule;
 import ratpack.func.Action;
 import ratpack.handling.Chain;
@@ -20,6 +21,8 @@ class Server {
     private SessionFactory sessionFactory;
 
     private UserModule userModule;
+
+    private ProductModule productModule;
 
     private Path staticPath;
 
@@ -51,6 +54,7 @@ class Server {
 
         //Backend modules
         userModule = new UserModule(sessionFactory);
+        productModule = new ProductModule(sessionFactory);
 
         if (isDevelopmentMode) {
             loadDemoData(userModule.userDemoDataLoader());
