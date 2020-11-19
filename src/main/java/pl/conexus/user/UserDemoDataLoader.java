@@ -25,6 +25,8 @@ class UserDemoDataLoader implements DemoDataLoader {
         for (int i = 0; i < 101; i++) {
             User marek = new User();
             marek.setName("Marek" + i);
+            marek.setEmail("marek" + i + "@gmail.com");
+            marek.setPassword("marekPass" + i);
             users.add(marek);
         }
 

@@ -1,5 +1,11 @@
 package pl.conexus.user;
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+
 
 @Entity
 @Table(name="user")
@@ -13,6 +19,12 @@ class User {
     @Column(name="name")
     private String name;
 
+    @Column(name="email")
+    private String email;
+
+    @Column(name="password")
+    private String password;
+
     Integer getId() {
         return id;
     }
@@ -25,7 +37,33 @@ class User {
         return name;
     }
 
+    String getEmail() {
+        return email;
+    }
+
+    void setEmail(String email) {
+        this.email = email;
+    }
+
+    String getPassword() {
+        return password;
+    }
+
+    void setPassword(String password) {
+        this.password = password;
+    }
+
     void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
