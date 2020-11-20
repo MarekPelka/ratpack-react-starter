@@ -11,72 +11,73 @@ public class CompanyDTO {
     private String site;
     private String address;
     private String description;
+    private String accountNumber;
 
-    Integer getId() {
+    public Integer getId() {
         return id;
     }
 
-    void setId(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    String getLastname() {
+    public String getLastname() {
         return lastname;
     }
 
-    void setLastname(String lastname) {
+    public void setLastname(String lastname) {
         this.lastname = lastname;
     }
 
-    String getTel() {
+    public String getTel() {
         return tel;
     }
 
-    void setTel(String tel) {
+    public void setTel(String tel) {
         this.tel = tel;
     }
 
-    String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    void setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    String getNip() {
+    public String getNip() {
         return nip;
     }
 
-    void setNip(String nip) {
+    public void setNip(String nip) {
         this.nip = nip;
     }
 
-    String getRegon() {
+    public String getRegon() {
         return regon;
     }
 
-    void setRegon(String regon) {
+    public void setRegon(String regon) {
         this.regon = regon;
     }
 
-    String getSite() {
+    public String getSite() {
         return site;
     }
 
-    void setSite(String site) {
+    public void setSite(String site) {
         this.site = site;
     }
 
-    String getAddress() {
+    public String getAddress() {
         return address;
     }
 
@@ -84,11 +85,36 @@ public class CompanyDTO {
         this.address = address;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "CompanyDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", tel='" + tel + '\'' +
+                ", email='" + email + '\'' +
+                ", nip='" + nip + '\'' +
+                ", regon='" + regon + '\'' +
+                ", site='" + site + '\'' +
+                ", address='" + address + '\'' +
+                ", description='" + description + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                '}';
     }
 }

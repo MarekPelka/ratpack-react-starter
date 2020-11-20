@@ -1,6 +1,11 @@
 package pl.conexus.company;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
 
 @Entity
 @Table(name="company")
@@ -28,6 +33,8 @@ class Company {
     private String address;
     @Column(name="description")
     private String description;
+    @Column(name="account_number")
+    private String accountNumber;
 
     Integer getId() {
         return id;
@@ -107,5 +114,30 @@ class Company {
 
     void setDescription(String description) {
         this.description = description;
+    }
+
+    String getAccountNumber() {
+        return accountNumber;
+    }
+
+    void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", tel='" + tel + '\'' +
+                ", email='" + email + '\'' +
+                ", nip='" + nip + '\'' +
+                ", regon='" + regon + '\'' +
+                ", site='" + site + '\'' +
+                ", address='" + address + '\'' +
+                ", description='" + description + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                '}';
     }
 }

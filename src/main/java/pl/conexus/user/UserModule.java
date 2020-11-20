@@ -6,6 +6,7 @@ import ratpack.func.Action;
 import ratpack.handling.Chain;
 
 import static pl.conexus.user.UserMapper.mapToDTO;
+import static ratpack.jackson.Jackson.fromJson;
 import static ratpack.jackson.Jackson.json;
 
 public class UserModule {
@@ -24,7 +25,7 @@ public class UserModule {
 
         return apiChain -> apiChain
                 .prefix("user", user(userService))
-                .prefix("user", addUserWithName(userService));
+                .prefix("user", addUser(userService));
 
     }
 
@@ -45,9 +46,11 @@ public class UserModule {
 
     }
 
-    //TODO needs to be changed to post TEST: http://localhost:5050/api/user/add?name=Pawel
-    private Action<Chain> addUserWithName(UserService userService) {
-        return  chain -> chain.get("add", ctx -> ctx.render(
-                json(mapToDTO(userService.addUser(ctx.getRequest().getQueryParams().get("name"))))));
+    //post user endpoint TEST: http://localhost:5050/api/user/add
+    private Action<Chain> addUser(UserService userService) {
+        return chain -> chain
+                .post("add", ctx -> ctx.parse(fromJson(UserDTO.class))
+                        .then(u -> ctx.render(json(userService.addUser(u))))
+        );
     }
 }

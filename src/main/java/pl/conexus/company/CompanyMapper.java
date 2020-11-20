@@ -13,6 +13,7 @@ public class CompanyMapper {
         company.setSite(companyDTO.getSite());
         company.setAddress(companyDTO.getAddress());
         company.setDescription(companyDTO.getDescription());
+        company.setAccountNumber(companyDTO.getAccountNumber());
         return company;
     }
 
@@ -28,6 +29,7 @@ public class CompanyMapper {
         companyDTO.setSite(company.getSite());
         companyDTO.setAddress(company.getAddress());
         companyDTO.setDescription(company.getDescription());
+        companyDTO.setAccountNumber(company.getAccountNumber());
         return companyDTO;
     }
 }

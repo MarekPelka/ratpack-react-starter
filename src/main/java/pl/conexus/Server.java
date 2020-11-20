@@ -2,6 +2,7 @@ package pl.conexus;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import pl.conexus.company.CompanyModule;
 import pl.conexus.foundation.DemoDataLoader;
 import pl.conexus.product.ProductModule;
 import pl.conexus.user.UserModule;
@@ -21,6 +22,8 @@ class Server {
     private SessionFactory sessionFactory;
 
     private UserModule userModule;
+
+    private CompanyModule companyModule;
 
     private ProductModule productModule;
 
@@ -54,10 +57,11 @@ class Server {
 
         //Backend modules
         userModule = new UserModule(sessionFactory);
+        companyModule = new CompanyModule(sessionFactory);
         productModule = new ProductModule(sessionFactory);
 
         if (isDevelopmentMode) {
-            loadDemoData(userModule.userDemoDataLoader());
+            loadDemoData(userModule.userDemoDataLoader(), companyModule.companyDemoDataLoader());
         }
     }
 
@@ -68,6 +72,7 @@ class Server {
     private Action<Chain> defineApi() {
         return apiChain -> apiChain
                 .insert(userModule.userApi())
+                .insert(companyModule.companyApi())
                 //some other api from different module .insert(gamesService.gamesApi())
                 ;
     }
