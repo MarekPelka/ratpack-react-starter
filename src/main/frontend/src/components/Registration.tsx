@@ -4,7 +4,26 @@ export default function Registration() {
     const [isEntrepreneur, setIsEntrepreneur] = useState(false);
 
     const addressPlaceholder = isEntrepreneur ? "Siedziba Twojej firmy np. Rynek Staromiejski 1, 73-110 Stargard"
-        : "Twój adres zamieszkania np. Rynek Staromiejski 1, 73-110 Stargard";
+		: "Twój adres zamieszkania np. Rynek Staromiejski 1, 73-110 Stargard";
+		
+	const onSubmitFunction = (e: any) => { 
+		e.preventDefault()
+		const form = e.target as HTMLFormElement;
+		const data = new FormData(form);
+
+		let object: any = {};
+		data.forEach((value, key) => object[key] = value);
+
+		
+		fetch('/api/user', {
+			method: 'POST',
+			body: JSON.stringify(object)
+		})
+		fetch('/api/user', {
+			method: 'POST',
+			body: JSON.stringify(object)
+		})
+	}
 
     return (
         <React.Fragment>
@@ -42,15 +61,15 @@ export default function Registration() {
                                 {/*    <label className="custom-control-label" htmlFor="customSwitch2">Osoba*/}
                                 {/*        fizyczna</label>*/}
                                 {/*</div>*/}
-                                <form className="card-body">
+                                <form className="card-body" onSubmit={onSubmitFunction}>
 
                                     <div className="row">
 
                                         <div className="col-md-6 mb-2">
 
                                             <div className="md-form ">
-                                                <label htmlFor="firstName" className="">Imię</label>
-                                                <input type="text" id="firstName" className="form-control"/>
+                                                <label htmlFor="firstName">Imię</label>
+                                                <input type="text" id="firstName" className="form-control" name="firstName"/>
                                             </div>
 
                                         </div>
@@ -59,7 +78,7 @@ export default function Registration() {
 
                                             <div className="md-form">
                                                 <label htmlFor="lastName" className="">Nazwisko</label>
-                                                <input type="text" id="lastName" className="form-control"/>
+                                                <input type="text" id="lastName" className="form-control" name="lastName"/>
                                             </div>
 
                                         </div>
