@@ -1,4 +1,4 @@
-package pl.conexus.user;
+package pl.conexus.company;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,21 +9,20 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.Optional;
 
-class UserRepository {
-
+public class CompanyRepository {
     private SessionFactory sessionFactory;
 
-    UserRepository(SessionFactory sessionFactory) {
+    CompanyRepository(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
-    Optional<User> getUserById(Integer userId) {
+    Optional<Company> getCompanyById(Integer companyId) {
         Session session = sessionFactory.openSession();
-        TypedQuery<User> query = session.createQuery(
-                "select u from User u where u.id = :id",
-                User.class).setParameter("id", userId);
+        TypedQuery<Company> query = session.createQuery(
+                "select c from Company c where c.id = :id",
+                Company.class).setParameter("id", companyId);
         try {
-            User u = query.getSingleResult();
+            Company u = query.getSingleResult();
             session.close();
             return Optional.of(u);
         } catch (NoResultException e) {
@@ -32,21 +31,20 @@ class UserRepository {
         }
     }
 
-    User addUser(User user) {
+    Company addCompany(Company company) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.save(user);
+        session.save(company);
         transaction.commit();
         session.close();
-        return user;
+        return company;
     }
 
-    //For debug
-    List<User> getAllUsers() {
+    List<Company> getAllCompanies() {
         Session session = sessionFactory.openSession();
-        TypedQuery<User> query = session.createQuery(
-                "from User u ",
-                User.class);
+        TypedQuery<Company> query = session.createQuery(
+                "from Company c",
+                Company.class);
         return query.getResultList();
     }
 }
