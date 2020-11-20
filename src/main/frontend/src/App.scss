@@ -1,41 +1,13 @@
-@charset "utf-8";
-@import "../node_modules/bulma/bulma.sass";
+@import "~bootstrap/scss/bootstrap";
 
-.full-height {
-	margin: 0;
-	display: flex;
-	min-height: 100vh;
-}
 
-.height-75 {
-	height: 75%;
-}
+body { padding-top: 70px; }
 
-.menu {
-	height: 100%;
-	position: relative;
-}
+.productCard { height: 270px; }
 
-.menu-bottom {
-	bottom: 0;
-	position: absolute;
-}
-
-.column-footer {
-	width: 100%;
-	bottom: 0;
-	position: absolute;
-}
-
-.stars > div{
-	width: $icon-dimensions * 5;
-}
-
-.stars-wrapper {
-	white-space: nowrap;
-	display: flex;
-}
-
-.product-description {
-	padding-top: 9rem;
+.productImg {
+    max-width:100px;
+    max-height:100px;
+    width:auto;
+    height:auto;
 }
