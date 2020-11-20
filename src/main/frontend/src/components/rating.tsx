@@ -12,7 +12,7 @@ export default function Rating({ rating = 5, hideText = false }) {
 
 	return (
 		<div className="stars-wrapper">
-			<div className="stars">
+			<div className="stars text-warning">
 				<div>
 				{Array.from({ length: fullStartToDisplay }, (_, index) => index + 1).map((e) => (
 					<span className={starsCss}>
