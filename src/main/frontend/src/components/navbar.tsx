@@ -14,6 +14,9 @@ export default function Navbar() {
 			name: 'Product list',
 			link: '/productList',
 		}, {
+			name: 'Rejstracja',
+			link: '/register',
+		},{
 			name: 'About',
 			link: '/about',
 		}

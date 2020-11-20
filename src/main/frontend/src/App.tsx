@@ -9,6 +9,7 @@ import Product from './routes/product';
 import Navbar from './components/navbar';
 import ProductList from './components/productList';
 import Footer from './components/footer'
+import Registration from "./components/Registration";
 
 
 function App() {
@@ -28,6 +29,12 @@ function App() {
 					</Route>
 					<Route path="/productList">
 						<ProductList />
+					</Route>
+					<Route path="/productList">
+						<ProductList />
+					</Route>
+					<Route path="/register">
+						<Registration />
 					</Route>
 				</Switch>
 			<Footer />
