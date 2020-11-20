@@ -21,11 +21,16 @@ body { padding-top: 70px; }
 	margin: 40px 0;
 }
 
-
 .productImg > card-body > * {
 	margin: 0 !important;
 }
 
 .modal {
 	background-color: #00000088;
+}
+
+/* REGISTRATION */
+
+.registration-header {
+    padding: 1.25rem;
 }
