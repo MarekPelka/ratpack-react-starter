@@ -1,0 +1,31 @@
+$theme-colors: (
+  "primary": #1482b5,
+  "danger": #da251c
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+
+body { padding-top: 70px; }
+
+.productCard {
+	height: 270px;
+	font-size: 0.9em;
+}
+
+.productImg {
+    max-width:100px;
+    max-height:100px;
+    width:auto;
+	height:auto;
+	margin: 40px 0;
+}
+
+
+.productImg > card-body > * {
+	margin: 0 !important;
+}
+
+.modal {
+	background-color: #00000088;
+}
