@@ -1,0 +1,9 @@
+[
+  {
+    "id": "1",
+    "name": "Pizza",
+    "price": 4500,
+    "amount": 100,
+    "description": "Very tasty pizza"
+  }
+]

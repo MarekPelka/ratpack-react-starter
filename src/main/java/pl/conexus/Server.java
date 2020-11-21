@@ -3,6 +3,7 @@ package pl.conexus;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import pl.conexus.company.CompanyModule;
+import pl.conexus.file.FileModule;
 import pl.conexus.foundation.DemoDataLoader;
 import pl.conexus.product.ProductModule;
 import pl.conexus.user.UserModule;
@@ -26,6 +27,8 @@ class Server {
     private CompanyModule companyModule;
 
     private ProductModule productModule;
+
+    private FileModule fileModule;
 
     private Path staticPath;
 
@@ -59,12 +62,14 @@ class Server {
         userModule = new UserModule(sessionFactory);
         companyModule = new CompanyModule(sessionFactory);
         productModule = new ProductModule(sessionFactory);
+        fileModule = new FileModule(sessionFactory);
 
         if (isDevelopmentMode) {
             loadDemoData(
                     userModule.userDemoDataLoader(),
                     companyModule.companyDemoDataLoader(),
-                    productModule.productDemoDataLoader()
+                    productModule.productDemoDataLoader(),
+                    fileModule.fileDemoDataLoader()
             );
         }
     }
@@ -78,6 +83,7 @@ class Server {
                 .insert(userModule.userApi())
                 .insert(companyModule.companyApi())
                 .insert(productModule.productApi())
+                .insert(fileModule.fileApi())
                 //some other api from different module .insert(gamesService.gamesApi())
                 ;
     }
