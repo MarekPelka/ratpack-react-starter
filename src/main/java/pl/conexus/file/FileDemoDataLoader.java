@@ -30,26 +30,29 @@ public class FileDemoDataLoader implements DemoDataLoader {
         List<File> files = new ArrayList<>();
 
         File file = new File();
-
         file.setName("Pizza image");
         file.setContent(BlobProxy.generateProxy(getImage("demo/pizza.jpg")));
         files.add(file);
 
-        file.setName("Makaron image");
-        file.setContent(BlobProxy.generateProxy(getImage("demo/makaron.jpg")));
-        files.add(file);
+        File file1 = new File();
+        file1.setName("Makaron image");
+        file1.setContent(BlobProxy.generateProxy(getImage("demo/makaron.jpg")));
+        files.add(file1);
 
-        file.setName("Salatka image");
-        file.setContent(BlobProxy.generateProxy(getImage("demo/salatka.jpg")));
-        files.add(file);
+        File file2 = new File();
+        file2.setName("Salatka image");
+        file2.setContent(BlobProxy.generateProxy(getImage("demo/salatka.jpg")));
+        files.add(file2);
 
-        file.setName("Steak image");
-        file.setContent(BlobProxy.generateProxy(getImage("demo/steak.jpg")));
-        files.add(file);
+        File file3 = new File();
+        file3.setName("Steak image");
+        file3.setContent(BlobProxy.generateProxy(getImage("demo/steak.jpg")));
+        files.add(file3);
 
-        file.setName("Tost image");
-        file.setContent(BlobProxy.generateProxy(getImage("demo/tost.jpg")));
-        files.add(file);
+        File file4 = new File();
+        file4.setName("Tost image");
+        file4.setContent(BlobProxy.generateProxy(getImage("demo/tost.jpg")));
+        files.add(file4);
 
         return files;
     }
