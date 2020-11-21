@@ -11,13 +11,16 @@
 
   "ceidg": [
     {
-      "company": "BETTER YOU MAGDALENA XYZ",
+      "company": "BETTER YOU JAN XYZ",
       "nip": 8542121839,
       "regon": 361927889,
       "name": "Jan",
-      "surname": "Kowalski",
+      "lastname": "Kowalski",
       "mainpkd": "47.82.Z",
-      "mainpkddesc": "Sprzedaż detaliczna wyrobów tekstylnych, odzieży i obuwia prowadzona na straganach i targowiskach"
+      "mainpkddesc": "Sprzedaż detaliczna wyrobów tekstylnych, odzieży i obuwia prowadzona na straganach i targowiskach",
+      "email": "jan.kowalski@gov.pl",
+      "site": "betteryou.pl",
+      "location": "ul. Stanisława Ignacego Witkiewicza 11/7, 73-110 Stargard"
     }
   ]
 }
