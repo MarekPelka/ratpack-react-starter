@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import logo from '../logo.png';
 
 export default function Navbar() {
 	const links = [
@@ -22,10 +23,11 @@ export default function Navbar() {
 		}
 	];
 	return (
-		<nav className="navbar fixed-top navbar-expand-lg navbar-light bg-white scrolling-navbar">
+		<nav className="navbar fixed-top navbar-expand-lg navbar-light scrolling-navbar">
 			<div className="container">
 				<a className="navbar-brand" href="/">
-					<strong>Targowisko</strong>
+					<img src={logo} alt="Logo" />
+					{/* <strong>Targowisko</strong> */}
 				</a>
 
 				<button
@@ -58,6 +60,11 @@ export default function Navbar() {
 								<span className="badge badge-pill badge-danger">1</span>
 								<FontAwesomeIcon icon={faShoppingCart} />
 								<span> Cart </span>
+							</a>
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="/login">
+								<span>Zaloguj</span>
 							</a>
 						</li>
 					</ul>
