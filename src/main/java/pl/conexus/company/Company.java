@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.GenerationType;
 import javax.persistence.Column;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.OneToMany;
 import javax.persistence.CascadeType;
 import java.util.List;
@@ -17,7 +18,8 @@ import java.util.List;
 public class Company {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "public")
+    @SequenceGenerator(name = "public", sequenceName = "company_seq", initialValue = 1, allocationSize = 1)
     @Column(name="id")
     private Integer id;
     @Column(name="name")

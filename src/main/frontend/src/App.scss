@@ -8,7 +8,7 @@ body {
 }
 
 body {
-	padding-top: 70px;
+	padding-top: 101px;
 }
 
 #root {
@@ -54,4 +54,8 @@ body {
 	min-height: 500px;
 	background: #1482b5;
 	background: linear-gradient(69deg, #162c36 0%, #1482b5 35%, #4f9dc1 100%);
+}
+
+.navbar {
+	background-color: #fafbfa;
 }

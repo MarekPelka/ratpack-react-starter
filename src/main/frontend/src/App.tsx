@@ -14,7 +14,6 @@ import Login from './routes/login'
 import Cart from './routes/cart'
 import Tutorial from "./components/Tutorial";
 
-
 function App() {
 	return (
 		<Router>

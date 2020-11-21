@@ -9,13 +9,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import java.util.Date;
 
 @Entity
 @Table(name = "opinion")
 public class Opinion {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "public")
+    @SequenceGenerator(name = "public", sequenceName = "opinion_seq", initialValue = 1, allocationSize = 1)
     @Column(name="id")
     private Integer id;
     @ManyToOne
