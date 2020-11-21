@@ -17,12 +17,12 @@ export default function Landing() {
 						wynos:
 					</p>
 					<div className="row">
-						<div className="col">
+						<div className="col-md-6">
 							<a className="card mb-4 shadow-sm" href="/shop">
 								<img src={produkty} className="card-img-top" />
 							</a>
 						</div>
-						<div className="col">
+						<div className="col-md-6">
 							<a className="card mb-4 shadow-sm" href="/gastronomia">
 								<img src={gastronomia} className="card-img-top" alt="..." />
 							</a>
