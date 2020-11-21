@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAfrica, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
-
 export default function ProductList() {
 	const categories = [ 'All', 'Shirts', 'Sport wears', 'Outdoor' ];
 
@@ -121,73 +120,97 @@ export default function ProductList() {
 	return (
 		<React.Fragment>
 			<Modal product={productModal} hideFunction={setProductModal} />
-			<div className="container">
-				<section className="mb-4">
-					<div className="row">
-						<div className="col-lg-3 col-md-6 mb-4">
-							<a className="card mb-4 shadow-sm" href="/register">
-								<img src={restauracjaLogo} className="card-img-top" />
-							</a>
+			<div className="container-fluid bgImage">
+				<div className="container">
+					<section className="pt-3 mb-4">
+						<div className="row">
+							<div className="col-lg-3 col-md-6 mb-4">
+								<a className="card mb-4 shadow-sm" href="/register">
+									<img src={restauracjaLogo} className="card-img-top" />
+								</a>
+							</div>
+							<div className="col-lg-1 col-md-6 mb-4" />
+							<div className="col">
+								<h5>
+									<strong>Restauracja Toskania</strong>
+								</h5>
+
+								<p>
+									ul. Warowna 25<br />
+									73-110 Stargard<br />
+									Tel. 91 834 03 48
+								</p>
+							</div>
+							<div className="col">
+								<p>
+									Godziny otwarcia<br />
+									poniedziałek – zamknięte<br />
+									wtorek-czwartek 12.00 – 20.00<br />
+									piątek – sobota 12.00 – 21.00<br />
+									niedziela 12.00 – 19.00
+								</p>
+							</div>
 						</div>
-						<div className="col">
-							<h5><strong>Restauracja Toskania</strong></h5>
-							<div className="row">
-								<div className="col">
-									
-									<p>ul. Warowna 25</p>
-									<p>73-110 Stargard</p>
-									<p>Tel. 91 834 03 48</p>
+						<div className="row text-center">
+							<div className="col">
+								<h5>
+									<strong>Zadzwoń</strong>
+								</h5>
+								<div className="text-danger">
+									<FontAwesomeIcon icon={faPhoneAlt} size="3x" />
 								</div>
-								<div className="col">
-									<p>Godziny otwarcia<br />
-										poniedziałek – zamknięte<br />
-										wtorek-czwartek 12.00 – 20.00<br />
-										piątek – sobota 12.00 – 21.00<br />
-										niedziela 12.00 – 19.00</p>
+							</div>
+							<div className="col">
+								<h5>
+									<strong>Odwiedź stronę</strong>
+								</h5>
+								<div className="text-danger">
+									<FontAwesomeIcon icon={faGlobeAfrica} size="3x" />
 								</div>
 							</div>
-						</div>
-					</div>
-					<div className="row text-center">
-						<div className="col">
-							<h5><strong>Zadzwoń</strong></h5>
-							<div className="text-danger">
-							<FontAwesomeIcon icon={faPhoneAlt} size="3x" />
-							</div>
-						</div>
-						<div className="col">
-							<h5><strong>Odwiedź stronę</strong></h5>
-							<div className="text-danger">
-							<FontAwesomeIcon icon={faGlobeAfrica} size="3x" />
-							</div>
-						</div>
-						<div className="col">
-							<h5><strong>Facebook</strong></h5>
-							<div className="text-primary">
-								<FontAwesomeIcon icon={faFacebook} size="3x" />
-							</div>
-						</div>
-					</div>
-					<div className="row pt-4">
-						<div className="col-md-4">
-							<div className="card mb-4 shadow-sm">
-								<img src="" className="card-img-top" />
-								<div className="card-body">
-									
-									<h5 className="card-title">
-										<strong>Aktualne promocje</strong>
-									</h5>
-									<p className="card-text">
-										This is a wider card with supporting text below as a natural lead-in to
-										additional content. This content is a little bit longer.
-									</p>
+							<div className="col">
+								<h5>
+									<strong>Facebook</strong>
+								</h5>
+								<div className="text-primary">
+									<FontAwesomeIcon icon={faFacebook} size="3x" />
 								</div>
 							</div>
 						</div>
+						<div className="row pt-4">
+							<div className="col-md-6">
+								<div className="card mb-4 shadow-sm">
+									<img src="" className="card-img-top" />
+									<div className="card-body">
+										<h5 className="card-title">
+											<strong>Program lojalnościowy</strong>
+										</h5>
+										<p className="card-text">
+											Mamy tuteeej bardzo dużo bardzo wypasionych promocji. Kilka chwil i miliony
+											zaoszczędzone
+										</p>
+									</div>
+								</div>
+							</div>
+							<div className="col-md-6">
+								<div className="card mb-4 shadow-sm">
+									<img src="" className="card-img-top" />
+									<div className="card-body">
+										<h5 className="card-title">
+											<strong>Aktualne promocje</strong>
+										</h5>
+										<p className="card-text">
+											Mamy tuteeej bardzo dużo bardzo wypasionych promocji. Kilka chwil i miliony
+											zaoszczędzone
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
-				</section>
+					</section>
+				</div>
 			</div>
-			<nav className="navbar navbar-expand-lg navbar-dark bg-dark mt-3 mb-5">
+			<nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
 				<div className="container">
 					<span className="navbar-brand">Kategorie:</span>
 

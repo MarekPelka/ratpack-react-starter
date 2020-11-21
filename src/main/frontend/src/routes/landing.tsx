@@ -3,9 +3,8 @@ import gastronomia from '../gastronomia.jpg';
 import produkty from '../produkty.jpg';
 import rejestracja from '../rejestracja2.jpg';
 import samouczek from '../samouczek.jpg';
-import promocje from '../promocje.jpg'
-import nowosci from '../nowosci.jpg'
-
+import promocje from '../promocje.jpg';
+import nowosci from '../nowosci.jpg';
 
 export default function Landing() {
 	return (
@@ -14,24 +13,18 @@ export default function Landing() {
 				<div className="container">
 					<h1>Kupuj lokalnie</h1>
 					<p className="lead text-muted">
-						Skorzystaj z lokali usługowych i gastronomicznych, które oferują swoje produkty z dowozem lub na wynos:
+						Skorzystaj z lokali usługowych i gastronomicznych, które oferują swoje produkty z dowozem lub na
+						wynos:
 					</p>
 					<div className="row">
 						<div className="col">
 							<a className="card mb-4 shadow-sm" href="/shop">
 								<img src={produkty} className="card-img-top" />
-								{/* <div className="card-body">
-									<p className="card-text">Produkty i usługi</p>
-								</div> */}
 							</a>
 						</div>
-						{/* <div className="col-md-4" /> */}
 						<div className="col">
 							<a className="card mb-4 shadow-sm" href="/gastronomia">
 								<img src={gastronomia} className="card-img-top" alt="..." />
-								{/* <div className="card-body">
-									<p className="card-text">Gastronomia</p>
-								</div> */}
 							</a>
 						</div>
 					</div>
@@ -45,7 +38,6 @@ export default function Landing() {
 							<div className="card mb-4 shadow-sm">
 								<img src={promocje} className="card-img-top" />
 								<div className="card-body">
-									
 									<h5 className="card-title">
 										<strong>Aktualne promocje</strong>
 									</h5>

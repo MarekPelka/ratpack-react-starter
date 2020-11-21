@@ -1,4 +1,4 @@
-import {Company} from "../model";
+import { Company } from "../model";
 import React from "react";
 
 export default function CompanyCard({ company }: { company: Company }) {
