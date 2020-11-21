@@ -25,5 +25,6 @@
         <mapping class="pl.conexus.product.Product"/>
         <mapping class="pl.conexus.product.opinion.Opinion"/>
         <mapping class="pl.conexus.product.promotion.Promotion"/>
+        <mapping class="pl.conexus.product.delivery.Delivery"/>
     </session-factory>
 </hibernate-configuration>

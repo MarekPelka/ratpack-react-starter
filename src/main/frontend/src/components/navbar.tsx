@@ -17,7 +17,11 @@ export default function Navbar() {
 		}, {
 			name: 'Rejstracja',
 			link: '/register',
-		},{
+
+		}, {
+			name: 'Samouczek e-sprzedawcy',
+			link: '/tutorial'
+		}, {
 			name: 'About',
 			link: '/about',
 		}

@@ -2,6 +2,7 @@ package pl.conexus.company;
 
 import org.hibernate.SessionFactory;
 import pl.conexus.foundation.DemoDataLoader;
+import pl.conexus.product.delivery.DeliveryRepository;
 import ratpack.func.Action;
 import ratpack.handling.Chain;
 
@@ -35,6 +36,10 @@ public class CompanyModule {
 
     CompanyRepository companyRepository() {
         return new CompanyRepository(sessionFactory);
+    }
+
+    DeliveryRepository deliveryRepository() {
+        return new DeliveryRepository(sessionFactory);
     }
 
     //get company endpoint TEST: http://localhost:5050/api/company/get?id=2

@@ -1,6 +1,7 @@
 package pl.conexus.product;
 
 import pl.conexus.company.CompanyMapper;
+import pl.conexus.product.delivery.DeliveryMapper;
 import pl.conexus.product.opinion.OpinionMapper;
 import pl.conexus.product.promotion.PromotionMapper;
 import java.util.stream.Collectors;
@@ -19,6 +20,8 @@ public class ProductMapper {
         productDTO.setPromotionDTO(PromotionMapper.mapToPromotionDTO(product.getPromotion()));
 //        productDTO.setFilesDTO(product.getFiles().stream().map(file -> FileMapper.mapToFileDTO(file)).collect(Collectors.toList()));
         productDTO.setFilesDTO(product.getFiles());
+        productDTO.setSupportedDelivieriesDTO(product.getSupportedDelivieries().stream()
+                .map(del -> DeliveryMapper.mapToDeliveryDTO(del)).collect(Collectors.toList()));
         return productDTO;
     }
 
@@ -34,6 +37,8 @@ public class ProductMapper {
                 .map(opinion -> OpinionMapper.mapToOpinion(opinion)).collect(Collectors.toList()));
         product.setPromotion(PromotionMapper.mapToPromotion(productDTO.getPromotionDTO()));
         product.setFiles(productDTO.getFilesDTO());
+        product.setSupportedDelivieries(productDTO.getSupportedDelivieriesDTO().stream()
+                .map(del -> DeliveryMapper.mapToDelivery(del)).collect(Collectors.toList()));
         return product;
     }
 }
