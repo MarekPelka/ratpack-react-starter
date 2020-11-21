@@ -9,7 +9,7 @@ import javax.persistence.Column;
 
 @Entity
 @Table(name="user")
-class User {
+public class User {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -25,35 +25,35 @@ class User {
     @Column(name="password")
     private String password;
 
-    Integer getId() {
+    public Integer getId() {
         return id;
     }
 
-    void setId(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    void setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    String getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    void setPassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
