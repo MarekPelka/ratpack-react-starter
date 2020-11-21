@@ -3,13 +3,14 @@ package pl.conexus.user;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import pl.conexus.foundation.ITransactionRepository;
 
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.Optional;
 
-class UserRepository {
+class UserRepository implements ITransactionRepository<User> {
 
     private SessionFactory sessionFactory;
 
@@ -18,27 +19,19 @@ class UserRepository {
     }
 
     Optional<User> getUserById(Integer userId) {
-        Session session = sessionFactory.openSession();
-        TypedQuery<User> query = session.createQuery(
-                "select u from User u where u.id = :id",
-                User.class).setParameter("id", userId);
-        try {
+        try (Session session = sessionFactory.openSession()) {
+            TypedQuery<User> query = session.createQuery(
+                    "select u from User u where u.id = :id",
+                    User.class).setParameter("id", userId);
             User u = query.getSingleResult();
-            session.close();
             return Optional.of(u);
         } catch (NoResultException e) {
-            session.close();
             return Optional.empty();
         }
     }
 
     User addUser(User user) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(user);
-        transaction.commit();
-        session.close();
-        return user;
+        return saveSingleRow(user, sessionFactory);
     }
 
     //For debug
