@@ -1,6 +1,7 @@
 package pl.conexus.product;
 
 import pl.conexus.company.CompanyDTO;
+import pl.conexus.product.delivery.DeliveryDTO;
 import pl.conexus.product.opinion.OpinionDTO;
 import pl.conexus.product.promotion.PromotionDTO;
 
@@ -16,6 +17,7 @@ public class ProductDTO {
     private String description;
     private List<OpinionDTO> opinionsDTO;
     private PromotionDTO promotionDTO;
+    List<DeliveryDTO> supportedDelivieriesDTO;
 
     public Integer getId() {
         return id;
@@ -81,6 +83,14 @@ public class ProductDTO {
         this.promotionDTO = promotionDTO;
     }
 
+    public List<DeliveryDTO> getSupportedDelivieriesDTO() {
+        return supportedDelivieriesDTO;
+    }
+
+    public void setSupportedDelivieriesDTO(List<DeliveryDTO> supportedDelivieriesDTO) {
+        this.supportedDelivieriesDTO = supportedDelivieriesDTO;
+    }
+
     @Override
     public String toString() {
         return "ProductDTO{" +
@@ -92,6 +102,7 @@ public class ProductDTO {
                 ", description='" + description + '\'' +
                 ", opinionsDTO=" + opinionsDTO +
                 ", promotionDTO=" + promotionDTO +
+                ", supportedDelivieries=" + supportedDelivieriesDTO +
                 '}';
     }
 }

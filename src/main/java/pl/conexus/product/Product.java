@@ -1,20 +1,14 @@
 package pl.conexus.product;
 
 import pl.conexus.company.Company;
+import pl.conexus.product.delivery.Delivery;
 import pl.conexus.product.opinion.Opinion;
 import pl.conexus.product.promotion.Promotion;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.GenerationType;
-import javax.persistence.Column;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 @Entity
 @Table(name="product")
@@ -38,6 +32,8 @@ public class Product {
     private List<Opinion> opinions;
     @ManyToOne
     private Promotion promotion;
+    @OneToMany
+    List<Delivery> supportedDelivieries;
 
     public Integer getId() {
         return id;
@@ -103,6 +99,14 @@ public class Product {
         this.promotion = promotion;
     }
 
+    public List<Delivery> getSupportedDelivieries() {
+        return supportedDelivieries;
+    }
+
+    public void setSupportedDelivieries(List<Delivery> supportedDelivieries) {
+        this.supportedDelivieries = supportedDelivieries;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -114,6 +118,7 @@ public class Product {
                 ", description='" + description + '\'' +
                 ", opinions=" + opinions +
                 ", promotion=" + promotion +
+                ", supportedDelivieries=" + supportedDelivieries +
                 '}';
     }
 }
