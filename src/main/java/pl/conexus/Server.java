@@ -61,7 +61,11 @@ class Server {
         productModule = new ProductModule(sessionFactory);
 
         if (isDevelopmentMode) {
-            loadDemoData(userModule.userDemoDataLoader(), companyModule.companyDemoDataLoader());
+            loadDemoData(
+                    userModule.userDemoDataLoader(),
+                    companyModule.companyDemoDataLoader(),
+                    productModule.productDemoDataLoader()
+            );
         }
     }
 
@@ -73,6 +77,7 @@ class Server {
         return apiChain -> apiChain
                 .insert(userModule.userApi())
                 .insert(companyModule.companyApi())
+                .insert(productModule.productApi())
                 //some other api from different module .insert(gamesService.gamesApi())
                 ;
     }
