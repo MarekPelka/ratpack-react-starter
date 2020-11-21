@@ -1,6 +1,7 @@
 package pl.conexus.product;
 
 import pl.conexus.company.CompanyDTO;
+import pl.conexus.file.FileDTO;
 import pl.conexus.product.delivery.DeliveryDTO;
 import pl.conexus.product.opinion.OpinionDTO;
 import pl.conexus.product.promotion.PromotionDTO;
@@ -17,6 +18,7 @@ public class ProductDTO {
     private String description;
     private List<OpinionDTO> opinionsDTO;
     private PromotionDTO promotionDTO;
+    private List<FileDTO> filesDTO;
     List<DeliveryDTO> supportedDelivieriesDTO;
 
     public Integer getId() {
@@ -83,6 +85,14 @@ public class ProductDTO {
         this.promotionDTO = promotionDTO;
     }
 
+    public List<FileDTO> getFilesDTO() {
+        return filesDTO;
+    }
+
+    public void setFilesDTO(List<FileDTO> filesDTO) {
+        this.filesDTO = filesDTO;
+    }
+  
     public List<DeliveryDTO> getSupportedDelivieriesDTO() {
         return supportedDelivieriesDTO;
     }

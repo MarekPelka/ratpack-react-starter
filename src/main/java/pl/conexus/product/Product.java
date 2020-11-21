@@ -1,13 +1,13 @@
 package pl.conexus.product;
 
 import pl.conexus.company.Company;
+import pl.conexus.file.FileDTO;
 import pl.conexus.product.delivery.Delivery;
 import pl.conexus.product.opinion.Opinion;
 import pl.conexus.product.promotion.Promotion;
 
 import java.math.BigDecimal;
 import java.util.List;
-
 import javax.persistence.*;
 
 @Entity
@@ -15,7 +15,8 @@ import javax.persistence.*;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "public")
+    @SequenceGenerator(name = "public", sequenceName = "product_seq", initialValue = 1, allocationSize = 1)
     @Column(name="id")
     private Integer id;
     @ManyToOne
@@ -32,6 +33,8 @@ public class Product {
     private List<Opinion> opinions;
     @ManyToOne
     private Promotion promotion;
+    @OneToMany(cascade = {CascadeType.ALL})
+    private List<FileDTO> files;
     @OneToMany
     List<Delivery> supportedDelivieries;
 
@@ -97,6 +100,14 @@ public class Product {
 
     public void setPromotion(Promotion promotion) {
         this.promotion = promotion;
+    }
+
+    public List<FileDTO> getFiles() {
+        return files;
+    }
+
+    public void setFiles(List<FileDTO> files) {
+        this.files = files;
     }
 
     public List<Delivery> getSupportedDelivieries() {

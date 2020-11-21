@@ -15,7 +15,6 @@ import Cart from './routes/cart'
 import Tutorial from "./components/Tutorial";
 import CompanyList from "./components/CompanyList";
 
-
 function App() {
 	return (
 		<Router>
