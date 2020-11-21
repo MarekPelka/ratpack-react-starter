@@ -14,6 +14,7 @@ import Login from './routes/login'
 import Cart from './routes/cart'
 import Tutorial from "./components/Tutorial";
 import CompanyList from "./components/CompanyList";
+import Landing from './routes/landing'
 
 function App() {
 	return (
@@ -50,6 +51,9 @@ function App() {
 					</Route>
 					<Route path="/cart">
 						<Cart />
+					</Route>
+					<Route path="/">
+						<Landing />
 					</Route>
 				</Switch>
 			{/* <Footer /> */}
