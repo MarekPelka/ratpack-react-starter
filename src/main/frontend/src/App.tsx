@@ -12,6 +12,7 @@ import Footer from './components/footer'
 import Registration from "./components/Registration";
 import Login from './routes/login'
 import Cart from './routes/cart'
+import Tutorial from "./components/Tutorial";
 
 
 function App() {
@@ -40,6 +41,12 @@ function App() {
 					</Route>
 					<Route path="/register">
 						<Registration />
+					</Route>
+					<Route path="/register">
+						<Registration />
+					</Route>
+					<Route path="/tutorial">
+						<Tutorial/>
 					</Route>
 					<Route path="/cart">
 						<Cart />
