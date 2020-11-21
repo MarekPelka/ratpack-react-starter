@@ -5,6 +5,10 @@ import ProductCardHorizontal from './productCardHorizontal';
 import { Product } from '../model';
 import Modal from './productModal';
 import restauracjaLogo from '../restauracja.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobeAfrica, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+
 
 export default function ProductList() {
 	const categories = [ 'All', 'Shirts', 'Sport wears', 'Outdoor' ];
@@ -146,27 +150,41 @@ export default function ProductList() {
 					</div>
 					<div className="row text-center">
 						<div className="col">
-							<div className="card-body">
-								<h5 className="card-title">
-									<strong>Zadzwoń</strong>
-								</h5>
+							<h5><strong>Zadzwoń</strong></h5>
+							<div className="text-danger">
+							<FontAwesomeIcon icon={faPhoneAlt} size="3x" />
 							</div>
 						</div>
 						<div className="col">
-							<div className="card-body">
-								<h5 className="card-title">
-									<strong>Odwiedź stronę</strong>
-								</h5>
+							<h5><strong>Odwiedź stronę</strong></h5>
+							<div className="text-danger">
+							<FontAwesomeIcon icon={faGlobeAfrica} size="3x" />
 							</div>
 						</div>
 						<div className="col">
-							<div className="card-body">
-								<h5 className="card-title">
-									<strong>Facebook</strong>
-								</h5>
+							<h5><strong>Facebook</strong></h5>
+							<div className="text-primary">
+								<FontAwesomeIcon icon={faFacebook} size="3x" />
 							</div>
 						</div>
 					</div>
+					<div className="row pt-4">
+						<div className="col-md-4">
+							<div className="card mb-4 shadow-sm">
+								<img src="" className="card-img-top" />
+								<div className="card-body">
+									
+									<h5 className="card-title">
+										<strong>Aktualne promocje</strong>
+									</h5>
+									<p className="card-text">
+										This is a wider card with supporting text below as a natural lead-in to
+										additional content. This content is a little bit longer.
+									</p>
+								</div>
+							</div>
+						</div>
+						</div>
 				</section>
 			</div>
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark mt-3 mb-5">
