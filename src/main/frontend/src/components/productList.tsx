@@ -4,6 +4,7 @@ import ProductCardHorizontal from './productCardHorizontal';
 
 import { Product } from '../model';
 import Modal from './productModal';
+import restauracjaLogo from '../restauracja.png';
 
 export default function ProductList() {
 	const categories = [ 'All', 'Shirts', 'Sport wears', 'Outdoor' ];
@@ -111,14 +112,66 @@ export default function ProductList() {
 			width,
 			height,
 		};
-	}
+	};
 
 	return (
 		<React.Fragment>
 			<Modal product={productModal} hideFunction={setProductModal} />
+			<div className="container">
+				<section className="mb-4">
+					<div className="row">
+						<div className="col-lg-3 col-md-6 mb-4">
+							<a className="card mb-4 shadow-sm" href="/register">
+								<img src={restauracjaLogo} className="card-img-top" />
+							</a>
+						</div>
+						<div className="col">
+							<h5><strong>Restauracja Toskania</strong></h5>
+							<div className="row">
+								<div className="col">
+									
+									<p>ul. Warowna 25</p>
+									<p>73-110 Stargard</p>
+									<p>Tel. 91 834 03 48</p>
+								</div>
+								<div className="col">
+									<p>Godziny otwarcia<br />
+										poniedziałek – zamknięte<br />
+										wtorek-czwartek 12.00 – 20.00<br />
+										piątek – sobota 12.00 – 21.00<br />
+										niedziela 12.00 – 19.00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="row text-center">
+						<div className="col">
+							<div className="card-body">
+								<h5 className="card-title">
+									<strong>Zadzwoń</strong>
+								</h5>
+							</div>
+						</div>
+						<div className="col">
+							<div className="card-body">
+								<h5 className="card-title">
+									<strong>Odwiedź stronę</strong>
+								</h5>
+							</div>
+						</div>
+						<div className="col">
+							<div className="card-body">
+								<h5 className="card-title">
+									<strong>Facebook</strong>
+								</h5>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark mt-3 mb-5">
 				<div className="container">
-					<span className="navbar-brand">Categories:</span>
+					<span className="navbar-brand">Kategorie:</span>
 
 					<button
 						className="navbar-toggler"
@@ -183,11 +236,6 @@ export default function ProductList() {
 							}
 						})}
 					</div>
-					{/* <div className="row">
-						<div className="col-9">
-							<ProductCardHorizontal product={products[0]} />
-						</div>
-					</div> */}
 				</section>
 
 				<nav className="d-flex justify-content-center">
