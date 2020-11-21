@@ -30,12 +30,11 @@ export default function ProductList() {
 		},
 		{
 			id: '1',
-			name: 'Pizza Funghi',
-			image: pizza2,
-			shortDescription: 'pieczarki, ser mozzarella, sos pomidorowy, oregano',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
-			price: 2200,
+			name: 'Pizza Vegetariana',
+			image: pizza5,
+			shortDescription: 'marynowane warzywa: cukinia, papryka, czerwona cebula, ser mozza-rella, sos pomidorowy, oregano',
+			description: '',
+			price: 2400,
 		},
 		{
 			id: '1',
@@ -48,20 +47,23 @@ export default function ProductList() {
 		},
 		{
 			id: '1',
+			name: 'Pizza Funghi',
+			image: pizza2,
+			shortDescription: 'pieczarki, ser mozzarella, sos pomidorowy, oregano',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
+			price: 2200,
+		},
+
+		{
+			id: '1',
 			name: 'Pizza Marinara',
 			image: pizza4,
 			shortDescription: 'kurczak marynowany, ser mozzarella, czosnek, sos pomidorowy, ore-gano',
 			description: '',
 			price: 2700,
 		},
-		{
-			id: '1',
-			name: 'Pizza Vegetariana',
-			image: pizza5,
-			shortDescription: 'marynowane warzywa: cukinia, papryka, czerwona cebula, ser mozza-rella, sos pomidorowy, oregano',
-			description: '',
-			price: 2400,
-		},
+
 		{
 			id: '1',
 			name: 'Gray sweater',

@@ -14,7 +14,7 @@ export default function ProductCard({ product }: { product: Product }) {
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
 					width: '100%',
-					height: '100%',
+					height: '70%',
 				}}
 			/>
 			<div className="card-body d-flex flex-column">
