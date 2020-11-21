@@ -1,3 +1,5 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
 buildscript {
   repositories {
     jcenter()
@@ -28,14 +30,16 @@ mainClassName = "pl.conexus.Main"
 
 def frontendDir = "$projectDir/src/main/frontend/"
 
+def npmExec = Os.isFamily(Os.FAMILY_WINDOWS) ? "npm.cmd" : "npm"
+
 task appNpmInstall(type: Exec) {
   workingDir "$frontendDir"
-  commandLine 'npm', 'install'
+  commandLine ("$npmExec", 'install')
 }
 
 task appNpmBuild(type: Exec) {
   workingDir "$frontendDir"
-  commandLine 'npm', 'run', 'build'
+  commandLine ("$npmExec", 'run', 'build')
 }
 
 task copyFrontend(type: Copy) {
