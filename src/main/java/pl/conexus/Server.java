@@ -63,7 +63,7 @@ class Server {
         if (isDevelopmentMode) {
             loadDemoData(
                     userModule.userDemoDataLoader(),
-                    companyModule.companyDemoDataLoader(),
+                   // companyModule.companyDemoDataLoader(),
                     productModule.productDemoDataLoader()
             );
         }

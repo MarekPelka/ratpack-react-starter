@@ -2,6 +2,7 @@ package pl.conexus.product;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import pl.conexus.company.Company;
 import pl.conexus.foundation.ITransactionRepository;
 
 import javax.persistence.NoResultException;
@@ -38,6 +39,18 @@ public class ProductRepository implements ITransactionRepository<Product> {
                 "from Product c",
                 Product.class);
         return query.getResultList();
+    }
+
+    Optional<Company> getCompanyById(Integer companyId) {
+        try (Session session = sessionFactory.openSession()) {
+            TypedQuery<Company> query = session.createQuery(
+                    "select c from Company where c.id = :id",
+                    Company.class).setParameter("id", companyId);
+            Company p = query.getSingleResult();
+            return Optional.of(p);
+        } catch (NoResultException e) {
+            return Optional.empty();
+        }
     }
 
     //TODO: to implement
