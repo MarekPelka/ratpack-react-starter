@@ -9,41 +9,63 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAfrica, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
+import pizza1 from '../pizza1.jpg'
+import pizza2 from '../pizza2.jpg'
+import pizza3 from '../pizza3.jpg'
+import pizza4 from '../pizza4.jpg'
+import pizza5 from '../pizza5.jpg'
+
 export default function ProductList() {
 	const categories = [ 'All', 'Shirts', 'Sport wears', 'Outdoor' ];
 
 	const products: Array<Product> = [
 		{
 			id: '1',
-			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-			shortDescription: 'Lorem ipsum sit dolor amet',
+			name: 'Pizza Margherita',
+			image: pizza1,
+			shortDescription: 'ser mozzarella, sos pomidorowy, oregano',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
-			price: 4500,
+			price: 2000,
 		},
 		{
 			id: '1',
-			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-			shortDescription: 'Lorem ipsum sit dolor amet',
+			name: 'Pizza Funghi',
+			image: pizza2,
+			shortDescription: 'pieczarki, ser mozzarella, sos pomidorowy, oregano',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
-			price: 4500,
+			price: 2200,
 		},
 		{
 			id: '1',
-			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-			shortDescription: 'Lorem ipsum sit dolor amet',
+			name: 'Pizza Bianca',
+			image: pizza3,
+			shortDescription: 'biały sos, pieczarki, ser mozzarella, gruszka, ser kozi, rukola, parmezan',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
-			price: 4500,
+			price: 2600,
+		},
+		{
+			id: '1',
+			name: 'Pizza Marinara',
+			image: pizza4,
+			shortDescription: 'kurczak marynowany, ser mozzarella, czosnek, sos pomidorowy, ore-gano',
+			description: '',
+			price: 2700,
+		},
+		{
+			id: '1',
+			name: 'Pizza Vegetariana',
+			image: pizza5,
+			shortDescription: 'marynowane warzywa: cukinia, papryka, czerwona cebula, ser mozza-rella, sos pomidorowy, oregano',
+			description: '',
+			price: 2400,
 		},
 		{
 			id: '1',
 			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
+			image: '/api/file/get?id=1',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
 			price: 4500,
@@ -51,7 +73,7 @@ export default function ProductList() {
 		{
 			id: '1',
 			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
+			image: '/api/file/get?id=2',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
 			price: 4500,
@@ -59,7 +81,7 @@ export default function ProductList() {
 		{
 			id: '1',
 			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
+			image: '/api/file/get?id=3',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
 			price: 4500,
@@ -67,7 +89,7 @@ export default function ProductList() {
 		{
 			id: '1',
 			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
+			image: '/api/file/get?id=4',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
 			price: 4500,
@@ -75,31 +97,7 @@ export default function ProductList() {
 		{
 			id: '1',
 			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-			shortDescription: 'Lorem ipsum sit dolor amet',
-			description: '',
-			price: 4500,
-		},
-		{
-			id: '1',
-			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-			shortDescription: 'Lorem ipsum sit dolor amet',
-			description: '',
-			price: 4500,
-		},
-		{
-			id: '1',
-			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-			shortDescription: 'Lorem ipsum sit dolor amet',
-			description: '',
-			price: 4500,
-		},
-		{
-			id: '1',
-			name: 'Gray sweater',
-			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
+			image: '/api/file/get?id=5',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
 			price: 4500,
@@ -140,6 +138,7 @@ export default function ProductList() {
 									73-110 Stargard<br />
 									Tel. 91 834 03 48
 								</p>
+								<p>Od 30 zł dowóz na terenie Stargardu gratis.</p>
 							</div>
 							<div className="col">
 								<p>

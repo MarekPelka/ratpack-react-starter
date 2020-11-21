@@ -6,7 +6,17 @@ export default function ProductCard({ product }: { product: Product }) {
 	const price = product.price / 100;
 	return (
 		<div className="card productCard">
-			<img className="productImg card-img-top mx-auto" src={product.image} alt="" />
+			{/* <img className="card-img-top" src={product.image} alt="" /> */}
+			<div
+				style={{
+					overflow: 'hidden',
+					backgroundImage: `url(${product.image})`,
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
+					width: '100%',
+					height: '100%',
+				}}
+			/>
 			<div className="card-body d-flex flex-column">
 				<p className="m-0">
 					<strong>{product.name}</strong>
