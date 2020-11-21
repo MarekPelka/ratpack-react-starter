@@ -66,7 +66,7 @@ export default function ProductList() {
 
 		{
 			id: '1',
-			name: 'Gray sweater',
+			name: 'Some Pizza',
 			image: '/api/file/get?id=1',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
@@ -74,7 +74,7 @@ export default function ProductList() {
 		},
 		{
 			id: '1',
-			name: 'Gray sweater',
+			name: 'Some Pizza',
 			image: '/api/file/get?id=2',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
@@ -82,7 +82,7 @@ export default function ProductList() {
 		},
 		{
 			id: '1',
-			name: 'Gray sweater',
+			name: 'Some Pizza',
 			image: '/api/file/get?id=3',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
@@ -90,7 +90,7 @@ export default function ProductList() {
 		},
 		{
 			id: '1',
-			name: 'Gray sweater',
+			name: 'Some Pizza',
 			image: '/api/file/get?id=4',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
@@ -98,7 +98,7 @@ export default function ProductList() {
 		},
 		{
 			id: '1',
-			name: 'Gray sweater',
+			name: 'Some Pizza',
 			image: '/api/file/get?id=5',
 			shortDescription: 'Lorem ipsum sit dolor amet',
 			description: '',
@@ -187,7 +187,7 @@ export default function ProductList() {
 											<strong>Program lojalnościowy</strong>
 										</h5>
 										<p className="card-text">
-											Mamy tuteeej bardzo dużo bardzo wypasionych promocji. Kilka chwil i miliony
+											Mamy tutaj bardzo dużo bardzo wypasionych promocji. Kilka chwil i miliony
 											zaoszczędzone
 										</p>
 									</div>
@@ -201,7 +201,7 @@ export default function ProductList() {
 											<strong>Aktualne promocje</strong>
 										</h5>
 										<p className="card-text">
-											Mamy tuteeej bardzo dużo bardzo wypasionych promocji. Kilka chwil i miliony
+											Mamy tutaj bardzo dużo bardzo wypasionych promocji. Kilka chwil i miliony
 											zaoszczędzone
 										</p>
 									</div>
@@ -243,11 +243,11 @@ export default function ProductList() {
 							<input
 								className="form-control mr-sm-2"
 								type="search"
-								placeholder="Search"
+								placeholder="Szukaj"
 								aria-label="Search"
 							/>
 							<button className="btn btn-outline-light my-2 my-sm-0" type="submit">
-								Search
+								Szukaj
 							</button>
 						</form>
 					</div>

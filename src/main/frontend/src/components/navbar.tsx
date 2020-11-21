@@ -9,7 +9,7 @@ export default function Navbar() {
 			name: 'Firmy',
 			link: '/firmy',
 		}, {
-			name: 'Rejstracja',
+			name: 'Rejestracja',
 			link: '/register',
 
 		}, {
@@ -56,7 +56,7 @@ export default function Navbar() {
 							<a className="nav-link" href="/cart">
 								<span className="badge badge-pill badge-danger">1</span>
 								<FontAwesomeIcon icon={faShoppingCart} />
-								<span> Cart </span>
+								<span> Koszyk </span>
 							</a>
 						</li>
 						<li className="nav-item">

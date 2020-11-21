@@ -223,11 +223,13 @@ export default function Registration() {
                                                placeholder={addressPlaceholder}/>
                                     </div>
 
+                                    {isEntrepreneur &&
                                     <div className="md-form mb-3">
                                         <label htmlFor="address" className="">Twoja strona WWW</label>
                                         <input type="text" id="site" name="site" className="form-control" value={site}  onChange={event => setSite(event.target.value)}
                                                placeholder="Adres Twojej strony WWW jeśli ją posiadasz np. example.com"/>
                                     </div>
+                                    }
 
                                     {isEntrepreneur &&
                                     <div>
