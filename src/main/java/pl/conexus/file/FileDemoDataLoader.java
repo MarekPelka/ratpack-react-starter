@@ -35,6 +35,22 @@ public class FileDemoDataLoader implements DemoDataLoader {
         file.setContent(BlobProxy.generateProxy(getImage("demo/pizza.jpg")));
         files.add(file);
 
+        file.setName("Makaron image");
+        file.setContent(BlobProxy.generateProxy(getImage("demo/makaron.jpg")));
+        files.add(file);
+
+        file.setName("Salatka image");
+        file.setContent(BlobProxy.generateProxy(getImage("demo/salatka.jpg")));
+        files.add(file);
+
+        file.setName("Steak image");
+        file.setContent(BlobProxy.generateProxy(getImage("demo/steak.jpg")));
+        files.add(file);
+
+        file.setName("Tost image");
+        file.setContent(BlobProxy.generateProxy(getImage("demo/tost.jpg")));
+        files.add(file);
+
         return files;
     }
 
