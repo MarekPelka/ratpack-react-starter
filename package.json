@@ -6,7 +6,7 @@
     "start:frontend": "cd src/main/frontend && npm start",
     "start:backend": "./gradlew run --continuous",
     "build": "./gradlew shadowJar",
-    "json-server": "json-server --watch src/main/mock/db.json"
+    "json-server": "json-server --watch src/main/mock/db.json --port 3001"
   },
   "dependencies": {
     "json-server": "^0.16.3",
