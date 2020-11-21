@@ -15,9 +15,8 @@ public class FileService {
     }
 
     File getFile(long id) {
-        File fileDTO = fileRepository.getFileById(id).orElseThrow(() -> new RuntimeException("File with id: " + id +" not found"));
-//        System.out.println("Get File " + fileDTO);
-        return fileDTO;
+        File file = fileRepository.getFileById(id).orElseThrow(() -> new RuntimeException("File with id: " + id +" not found"));
+        return file;
     }
 
     List<File> getAllFiles() {

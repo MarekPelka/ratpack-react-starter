@@ -22,7 +22,7 @@ public class FileRepository implements ITransactionRepository<File> {
         this.sessionFactory = sessionFactory;
     }
 
-    Optional<File> getFileById(long fileId) {
+    public Optional<File> getFileById(long fileId) {
         try (Session session = sessionFactory.openSession()) {
             TypedQuery<File> query = session.createQuery(
                     "select f from File f where f.id = :id",
@@ -34,7 +34,7 @@ public class FileRepository implements ITransactionRepository<File> {
         }
     }
 
-        List<File> getAllFiles() {
+        public List<File> getAllFiles() {
             Session session = sessionFactory.openSession();
             TypedQuery<File> query = session.createQuery(
                     "from File c",
@@ -42,7 +42,7 @@ public class FileRepository implements ITransactionRepository<File> {
             return query.getResultList();
         }
 
-    File addFile(File file) {
+    public File addFile(File file) {
 //        File file = new File();
 //        Session session = null;
 //        Transaction transaction = null;

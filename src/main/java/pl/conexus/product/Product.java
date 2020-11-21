@@ -1,6 +1,7 @@
 package pl.conexus.product;
 
 import pl.conexus.company.Company;
+import pl.conexus.file.FileDTO;
 import pl.conexus.product.opinion.Opinion;
 import pl.conexus.product.promotion.Promotion;
 
@@ -15,13 +16,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.CascadeType;
 
 @Entity
 @Table(name="product")
 public class Product {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "public")
+    @SequenceGenerator(name = "public", sequenceName = "product_seq", initialValue = 1, allocationSize = 1)
     @Column(name="id")
     private Integer id;
     @ManyToOne
@@ -38,6 +42,8 @@ public class Product {
     private List<Opinion> opinions;
     @ManyToOne
     private Promotion promotion;
+    @OneToMany(cascade = {CascadeType.ALL})
+    private List<FileDTO> files;
 
     public Integer getId() {
         return id;
@@ -101,6 +107,14 @@ public class Product {
 
     public void setPromotion(Promotion promotion) {
         this.promotion = promotion;
+    }
+
+    public List<FileDTO> getFiles() {
+        return files;
+    }
+
+    public void setFiles(List<FileDTO> files) {
+        this.files = files;
     }
 
     @Override

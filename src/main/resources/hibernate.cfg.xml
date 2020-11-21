@@ -20,6 +20,7 @@
         <property name="hibernate.jdbc.batch_size">20</property>
         <mapping class="pl.conexus.user.User"/>
         <mapping class="pl.conexus.file.File"/>
+        <mapping class="pl.conexus.file.FileDTO"/>
         <mapping class="pl.conexus.company.Company"/>
         <mapping class="pl.conexus.product.Product"/>
         <mapping class="pl.conexus.product.opinion.Opinion"/>

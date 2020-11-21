@@ -7,7 +7,8 @@ import javax.persistence.*;
 public class Promotion {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "public")
+    @SequenceGenerator(name = "public", sequenceName = "promotion_seq", initialValue = 1, allocationSize = 1)
     @Column(name="id")
     private Integer id;
     @Column(name="name")

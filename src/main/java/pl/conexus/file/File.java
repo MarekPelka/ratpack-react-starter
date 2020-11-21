@@ -1,11 +1,6 @@
 package pl.conexus.file;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.sql.Blob;
 
 @Entity
@@ -13,15 +8,16 @@ import java.sql.Blob;
 public class File {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "public")
+    @SequenceGenerator(name = "public", sequenceName = "file_seq", initialValue = 1, allocationSize = 1)
     @Column(name = "id")
     private long id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "file")
-    private Blob image;
+    @Column(name = "content")
+    private Blob content;
 
     public long getId() {
         return id;
@@ -39,11 +35,19 @@ public class File {
         this.name = name;
     }
 
-    public Blob getImage() {
-        return image;
+    public Blob getContent() {
+        return content;
     }
 
-    public void setImage(Blob image) {
-        this.image = image;
+    public void setContent(Blob content) {
+        this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return "File{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

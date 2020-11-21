@@ -48,7 +48,7 @@ public class FileModule {
     private Action<Chain> getFile(FileService fileService) {
         return chain -> chain
                 .get("get", ctx -> {
-                            Blob blob = fileService.getFile(Long.parseLong(ctx.getRequest().getQueryParams().get("id"))).getImage();
+                            Blob blob = fileService.getFile(Long.parseLong(ctx.getRequest().getQueryParams().get("id"))).getContent();
                             ctx.getResponse().send("img/jpg", blob.getBytes(0, (int) blob.length()));
                         }
 //                    ctx.render(

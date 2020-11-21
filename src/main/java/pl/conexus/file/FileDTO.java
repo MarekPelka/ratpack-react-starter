@@ -1,7 +1,13 @@
 package pl.conexus.file;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="file_description")
 public class FileDTO {
+    @Id
     private long id;
+    @Column(name="name")
     private String name;
 
     public long getId() {
@@ -18,5 +24,13 @@ public class FileDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "FileDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

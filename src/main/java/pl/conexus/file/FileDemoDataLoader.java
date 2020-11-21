@@ -32,7 +32,7 @@ public class FileDemoDataLoader implements DemoDataLoader {
         File file = new File();
 
         file.setName("Pizza image");
-        file.setImage(BlobProxy.generateProxy(getImage("pizza.jpg")));
+        file.setContent(BlobProxy.generateProxy(getImage("demo/pizza.jpg")));
         files.add(file);
 
         return files;
