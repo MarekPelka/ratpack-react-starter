@@ -13,107 +13,72 @@ export default function CompanyList() {
             id: '1',
             name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
             image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
+            location: 'ul. Wojska Polskiego 73, 73-110 Stargard',
+            phone: '509 132 777'
+        },
+        {
+            id: '1',
+            name: 'FHU Ziemniakowelove',
+            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/ziemniakowelove-foto.jpg',
+            location: 'ul. Kazimierza Przerwy-Tetmajera 1, 73-110 Stargard',
+            phone: '780 150 516'
         },
         {
             id: '1',
             name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
             image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
+            location: 'ul. Wojska Polskiego 73, 73-110 Stargard',
+            phone: '509 132 777'
+        },
+        {
+            id: '1',
+            name: 'FHU Ziemniakowelove',
+            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/ziemniakowelove-foto.jpg',
+            location: 'ul. Kazimierza Przerwy-Tetmajera 1, 73-110 Stargard',
+            phone: '780 150 516'
         },
         {
             id: '1',
             name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
             image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
+            location: 'ul. Wojska Polskiego 73, 73-110 Stargard',
+            phone: '509 132 777'
+        },
+        {
+            id: '1',
+            name: 'FHU Ziemniakowelove',
+            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/ziemniakowelove-foto.jpg',
+            location: 'ul. Kazimierza Przerwy-Tetmajera 1, 73-110 Stargard',
+            phone: '780 150 516'
         },
         {
             id: '1',
             name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
             image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
+            location: 'ul. Wojska Polskiego 73, 73-110 Stargard',
+            phone: '509 132 777'
+        },
+        {
+            id: '1',
+            name: 'FHU Ziemniakowelove',
+            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/ziemniakowelove-foto.jpg',
+            location: 'ul. Kazimierza Przerwy-Tetmajera 1, 73-110 Stargard',
+            phone: '780 150 516'
         },
         {
             id: '1',
             name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
             image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
+            location: 'ul. Wojska Polskiego 73, 73-110 Stargard',
+            phone: '509 132 777'
         },
         {
             id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
+            name: 'FHU Ziemniakowelove',
+            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/ziemniakowelove-foto.jpg',
+            location: 'ul. Kazimierza Przerwy-Tetmajera 1, 73-110 Stargard',
+            phone: '780 150 516'
         },
-        {
-            id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
-        },
-        {
-            id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
-        },
-        {
-            id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
-        },
-        {
-            id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
-        },
-        {
-            id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
-        },
-        {
-            id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
-        },
-        {
-            id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
-        },
-        {
-            id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
-        },
-        {
-            id: '1',
-            name: 'Izabela Borutyńska Fotografia (Foto Krystyna)',
-            image: 'https://kupujlokalnie.stargard.pl/wp-content/uploads/2020/04/izabela-borutynska-foto.jpg',
-            location: 'Wojska Polskiego 73  73-110 Stargard',
-            phone: '507 123 321'
-        }
     ];
 
     const [ productModal, setProductModal ] = useState(undefined as Product | undefined);

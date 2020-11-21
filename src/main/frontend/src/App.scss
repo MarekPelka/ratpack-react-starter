@@ -20,6 +20,14 @@ body {
 	font-size: 0.9em;
 }
 
+.companyCard {
+	min-height: 370px;
+
+	.card-img-top {
+		max-height: 150px;
+	}
+}
+
 .productImg {
 	max-width: 100px;
 	max-height: 100px;
@@ -58,4 +66,10 @@ body {
 
 .navbar {
 	background-color: #fafbfa;
+}
+
+.bgImage {
+	background-image: url(./background2.png);
+	background-repeat: no-repeat;
+	background-position: right;
 }
