@@ -13,6 +13,7 @@ import Registration from "./components/Registration";
 import Login from './routes/login'
 import Cart from './routes/cart'
 import Tutorial from "./components/Tutorial";
+import CompanyList from "./components/CompanyList";
 
 
 function App() {
@@ -36,8 +37,8 @@ function App() {
 					<Route path="/productList">
 						<ProductList />
 					</Route>
-					<Route path="/productList">
-						<ProductList />
+					<Route path="/companyList">
+						<CompanyList />
 					</Route>
 					<Route path="/register">
 						<Registration />

@@ -11,6 +11,9 @@ export default function Navbar() {
 			name: 'Product',
 			link: '/product',
 		}, {
+			name: 'Company list',
+			link: '/companyList',
+		}, {
 			name: 'Product list',
 			link: '/productList',
 		}, {
