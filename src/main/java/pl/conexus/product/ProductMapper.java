@@ -15,13 +15,13 @@ public class ProductMapper {
         productDTO.setPrice(product.getPrice());
         productDTO.setAmount(product.getAmount());
         productDTO.setDescription(product.getDescription());
-        productDTO.setOpinionsDTO(product.getOpinions().stream()
-                .map(opinion -> OpinionMapper.mapToOpinionDTO(opinion)).collect(Collectors.toList()));
-        productDTO.setPromotionDTO(PromotionMapper.mapToPromotionDTO(product.getPromotion()));
+//        productDTO.setOpinionsDTO(product.getOpinions().stream()
+//                .map(opinion -> OpinionMapper.mapToOpinionDTO(opinion)).collect(Collectors.toList()));
+//        productDTO.setPromotionDTO(PromotionMapper.mapToPromotionDTO(product.getPromotion()));
 //        productDTO.setFilesDTO(product.getFiles().stream().map(file -> FileMapper.mapToFileDTO(file)).collect(Collectors.toList()));
         productDTO.setFilesDTO(product.getFiles());
-        productDTO.setSupportedDelivieriesDTO(product.getSupportedDelivieries().stream()
-                .map(del -> DeliveryMapper.mapToDeliveryDTO(del)).collect(Collectors.toList()));
+//        productDTO.setSupportedDelivieriesDTO(product.getSupportedDelivieries().stream()
+//                .map(del -> DeliveryMapper.mapToDeliveryDTO(del)).collect(Collectors.toList()));
         return productDTO;
     }
 
@@ -33,12 +33,12 @@ public class ProductMapper {
         product.setPrice(productDTO.getPrice());
         product.setAmount(productDTO.getAmount());
         product.setDescription(productDTO.getDescription());
-        product.setOpinions(productDTO.getOpinionsDTO().stream()
-                .map(opinion -> OpinionMapper.mapToOpinion(opinion)).collect(Collectors.toList()));
-        product.setPromotion(PromotionMapper.mapToPromotion(productDTO.getPromotionDTO()));
+//        product.setOpinions(productDTO.getOpinionsDTO().stream()
+//                .map(opinion -> OpinionMapper.mapToOpinion(opinion)).collect(Collectors.toList()));
+//        product.setPromotion(PromotionMapper.mapToPromotion(productDTO.getPromotionDTO()));
         product.setFiles(productDTO.getFilesDTO());
-        product.setSupportedDelivieries(productDTO.getSupportedDelivieriesDTO().stream()
-                .map(del -> DeliveryMapper.mapToDelivery(del)).collect(Collectors.toList()));
+//        product.setSupportedDelivieries(productDTO.getSupportedDelivieriesDTO().stream()
+//                .map(del -> DeliveryMapper.mapToDelivery(del)).collect(Collectors.toList()));
         return product;
     }
 }

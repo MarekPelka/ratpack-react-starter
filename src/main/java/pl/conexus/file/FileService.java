@@ -26,10 +26,10 @@ public class FileService {
                 .map(f -> f)
                 .collect(Collectors.toList());
     }
-//
-//    public FileDTO addFile(FileDTO fileDTO) {
-//        return FileMapper.mapToFileDTO(
-//                fileRepository.addFile(FileMapper.mapToFile(fileDTO))
-//        );
-//    }
+
+    public FileDTO addFile(File file) {
+        return FileMapper.mapToFileDTO(
+                fileRepository.addFile(file)
+        );
+    }
 }

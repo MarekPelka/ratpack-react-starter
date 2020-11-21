@@ -22,8 +22,10 @@ public class CompanyMapper {
             company.setBankAccount(companyDTO.getBankAccount());
             company.setOffer(companyDTO.getOffer());
             company.setSpecialOffer(companyDTO.getSpecialOffer());
-            company.setDeliveries(companyDTO.getDeliveriesDTO().stream()
-                    .map(deliveryDTO -> DeliveryMapper.mapToDelivery(deliveryDTO)).collect(Collectors.toList()));
+            if (companyDTO.getDeliveriesDTO() != null) {
+                company.setDeliveries(companyDTO.getDeliveriesDTO().stream()
+                        .map(deliveryDTO -> DeliveryMapper.mapToDelivery(deliveryDTO)).collect(Collectors.toList()));
+            }
         }
         return company;
     }
@@ -46,8 +48,10 @@ public class CompanyMapper {
             companyDTO.setBankAccount(company.getBankAccount());
             companyDTO.setOffer(company.getOffer());
             companyDTO.setSpecialOffer(company.getSpecialOffer());
-            companyDTO.setDeliveriesDTO(company.getDeliveries().stream()
-                    .map(delivery -> DeliveryMapper.mapToDeliveryDTO(delivery)).collect(Collectors.toList()));
+            if (company.getDeliveries() != null) {
+                companyDTO.setDeliveriesDTO(company.getDeliveries().stream()
+                        .map(delivery -> DeliveryMapper.mapToDeliveryDTO(delivery)).collect(Collectors.toList()));
+            }
         }
         System.out.println(companyDTO);
         return companyDTO;

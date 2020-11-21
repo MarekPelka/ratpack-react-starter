@@ -43,36 +43,7 @@ public class FileRepository implements ITransactionRepository<File> {
         }
 
     public File addFile(File file) {
-//        File file = new File();
-//        Session session = null;
-//        Transaction transaction = null;
-//        try {
-//            session = sessionFactory.openSession();
-//            transaction = session.beginTransaction();
-//            transaction.begin();
-//
-//
-//            file.setName("Pizza image");
-//            session.doWork(conn -> {
-//                file.setImage(BlobProxy.generateProxy(getImage("pizza.jpg")));
-//            });
-//            session.save(file);
-//            transaction.commit();
-//
-//            System.out.println("File is saved successfully.");
-//
-//        } catch (Exception e) {
-//            if (transaction != null) {
-//                System.out.println("Transaction is being rolled back.");
-//                transaction.rollback();
-//            }
-//            e.printStackTrace();
-//        } finally {
-//            if (session != null) {
-//                session.close();
-//            }
-//        }
-        return file;
+        return saveSingleRow(file, sessionFactory);
     }
 
 
