@@ -6,17 +6,8 @@ import logo from '../logo.png';
 export default function Navbar() {
 	const links = [
 		{
-			name: 'Home',
-			link: '/',
-		}, {
-			name: 'Product',
-			link: '/product',
-		}, {
-			name: 'Company list',
-			link: '/companyList',
-		}, {
-			name: 'Product list',
-			link: '/productList',
+			name: 'Firmy',
+			link: '/firmy',
 		}, {
 			name: 'Rejstracja',
 			link: '/register',
@@ -25,7 +16,7 @@ export default function Navbar() {
 			name: 'Samouczek e-sprzedawcy',
 			link: '/tutorial'
 		}, {
-			name: 'About',
+			name: 'O nas',
 			link: '/about',
 		}
 	];
@@ -34,7 +25,6 @@ export default function Navbar() {
 			<div className="container">
 				<a className="navbar-brand" href="/">
 					<img src={logo} alt="Logo" />
-					{/* <strong>Targowisko</strong> */}
 				</a>
 
 				<button

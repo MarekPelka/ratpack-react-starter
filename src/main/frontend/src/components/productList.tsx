@@ -16,7 +16,7 @@ import pizza4 from '../pizza4.jpg'
 import pizza5 from '../pizza5.jpg'
 
 export default function ProductList() {
-	const categories = [ 'All', 'Shirts', 'Sport wears', 'Outdoor' ];
+	const categories = [ 'Wszystkie', 'Pizza', 'Makarony', 'Desery' ];
 
 	const products: Array<Product> = [
 		{

@@ -37,6 +37,9 @@ function App() {
 					<Route path="/firma/:id">
 						<ProductList />
 					</Route>
+					<Route path="/firmy">
+						<CompanyList />
+					</Route>
 					<Route path="/gastronomia">
 						<CompanyList />
 					</Route>
