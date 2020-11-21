@@ -54,7 +54,7 @@ export default function Navbar() {
 
 					<ul className="navbar-nav">
 						<li className="nav-item">
-							<a className="nav-link">
+							<a className="nav-link" href="/cart">
 								<span className="badge badge-pill badge-danger">1</span>
 								<FontAwesomeIcon icon={faShoppingCart} />
 								<span> Cart </span>

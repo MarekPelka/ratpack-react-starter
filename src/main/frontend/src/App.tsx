@@ -10,6 +10,8 @@ import Navbar from './components/navbar';
 import ProductList from './components/productList';
 import Footer from './components/footer'
 import Registration from "./components/Registration";
+import Login from './routes/login'
+import Cart from './routes/cart'
 
 
 function App() {
@@ -21,6 +23,9 @@ function App() {
 					<Menu />
 				</div> */}
 				<Switch>
+					<Route path="/login">
+						<Login />
+					</Route>
 					<Route path="/about">
 						<About />
 					</Route>
@@ -36,8 +41,11 @@ function App() {
 					<Route path="/register">
 						<Registration />
 					</Route>
+					<Route path="/cart">
+						<Cart />
+					</Route>
 				</Switch>
-			<Footer />
+			{/* <Footer /> */}
 		</Router>
 	);
 }

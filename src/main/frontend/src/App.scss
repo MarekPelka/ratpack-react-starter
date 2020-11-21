@@ -1,12 +1,19 @@
-$theme-colors: (
-  "primary": #1482b5,
-  "danger": #da251c
-);
+$theme-colors: ("primary": #1482b5, "danger": #da251c);
 
 @import "~bootstrap/scss/bootstrap";
 
+html,
+body {
+	height: 100%;
+}
 
-body { padding-top: 70px; }
+body {
+	padding-top: 70px;
+}
+
+#root {
+	height: 100%;
+}
 
 .productCard {
 	height: 270px;
@@ -14,11 +21,18 @@ body { padding-top: 70px; }
 }
 
 .productImg {
-    max-width:100px;
-    max-height:100px;
-    width:auto;
-	height:auto;
+	max-width: 100px;
+	max-height: 100px;
+	width: auto;
+	height: auto;
 	margin: 40px 0;
+}
+
+.productImgHorizontal {
+	max-width: 220px;
+	max-height: 220px;
+	width: auto;
+	height: auto;
 }
 
 .productImg > card-body > * {
@@ -32,5 +46,12 @@ body { padding-top: 70px; }
 /* REGISTRATION */
 
 .registration-header {
-    padding: 1.25rem;
+	padding: 1.25rem;
+}
+
+.masthead {
+	height: calc(100vh - 70px);
+	min-height: 500px;
+	background: #1482b5;
+	background: linear-gradient(69deg, #162c36 0%, #1482b5 35%, #4f9dc1 100%);
 }

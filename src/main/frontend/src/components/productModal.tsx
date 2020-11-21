@@ -35,11 +35,11 @@ export default function Modal({
 						</button>
 					</div>
 					<div className="modal-body">
-						<div className="media">
-							<div className="media-left">
-								<img className="media-object" src={product.image} alt="" />
+						<div className="row">
+							<div className="col-lg-4 col-md-6 mb-4">
+								<img className="img-fluid" src={product.image} alt="" />
 							</div>
-							<div className="media-body">
+							<div className="col">
 								<p>{product.description}</p>
 								<div className="row justify-content-md-start" style={{ whiteSpace: 'nowrap' }}>
 									
@@ -53,18 +53,6 @@ export default function Modal({
 						</div>
 					</div>
 					<div className="modal-footer">
-						{/* <button
-							type="button"
-							className="btn btn-secondary"
-							data-dismiss="modal"
-							onClick={() => hideFunction(undefined)}>
-							Close
-						</button>
-						<button type="button" className="btn btn-primary">
-							Save changes
-						</button> */}
-						{/* <form className="form-group"> */}
-						{/* <div className="row justify-content-end"> */}
 						<div className="col-3">
 							<input
 								type="number"
@@ -74,7 +62,6 @@ export default function Modal({
 								className="form-control"
 							/>
 						</div>
-						{/* <div className="col-6"> */}
 						<button
 							className="btn btn-primary btn-md my-0 p"
 							type="submit"
@@ -82,9 +69,6 @@ export default function Modal({
 							{translation.addToCart}
 							<i className="fas fa-shopping-cart ml-1" />
 						</button>
-						{/* </div> */}
-						{/* </div> */}
-						{/* </form> */}
 					</div>
 				</div>
 			</div>

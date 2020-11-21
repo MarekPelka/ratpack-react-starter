@@ -20,17 +20,22 @@ export default function ProductCardHorizontal({ product }: { product: Product })
 		<div className="card productCard mb-3">
 			<div className="row no-gutters">
 				<div className="col-md-4">
-					<img className="card-img" src={product.image} alt="" />
+					<img className="card-img productImgHorizontal" src={product.image} alt="" />
 				</div>
-				<div className="col-md-8">
+				<div className="col-md-8 align-self-center">
 					<div className="card-body">
-						<h5 className="card-title">Card title</h5>
-						<p className="card-text">
-							This is a wider card with supporting text below as a natural lead-in to additional content.
-							This content is a little bit longer.
-						</p>
+						<h5 className="card-title"><strong>{product.name}</strong></h5>
+						{/* <p className="card-text">{product.shortDescription}</p>
 						<p className="card-text">
 							<small className="text-muted">Last updated 3 mins ago</small>
+						</p>
+
+						<p className="m-0">
+							<strong>{product.name}</strong>
+						</p> */}
+						<p className="m-0 text-muted">{product.shortDescription}</p>
+						<p className="m-0 text-primary">
+							{price.toFixed(2)} {translation.currency}
 						</p>
 					</div>
 				</div>

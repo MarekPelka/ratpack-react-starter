@@ -3,7 +3,7 @@ import ProductCard from './productCard';
 import ProductCardHorizontal from './productCardHorizontal';
 
 import { Product } from '../model';
-import Modal from './productModal'
+import Modal from './productModal';
 
 export default function ProductList() {
 	const categories = [ 'All', 'Shirts', 'Sport wears', 'Outdoor' ];
@@ -14,7 +14,8 @@ export default function ProductList() {
 			name: 'Gray sweater',
 			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
 			shortDescription: 'Lorem ipsum sit dolor amet',
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
 			price: 4500,
 		},
 		{
@@ -22,7 +23,8 @@ export default function ProductList() {
 			name: 'Gray sweater',
 			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
 			shortDescription: 'Lorem ipsum sit dolor amet',
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
 			price: 4500,
 		},
 		{
@@ -30,7 +32,8 @@ export default function ProductList() {
 			name: 'Gray sweater',
 			image: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
 			shortDescription: 'Lorem ipsum sit dolor amet',
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh quis viverra luctus. Aliquam volutpat eget dui at commodo. Nunc arcu turpis, ultrices vitae facilisis eget, aliquet gravida turpis. Praesent blandit diam sit amet nunc sagittis, in auctor justo accumsan. Nunc at nisi enim. Pellentesque mollis iaculis turpis, vel semper nibh vestibulum in. Praesent imperdiet purus sed turpis finibus porttitor sit amet et est. Nullam vulputate congue gravida. Proin mattis erat nec lacus auctor, eu sodales sapien pretium. Fusce fermentum, turpis id sollicitudin scelerisque, lectus elit porttitor tortor, sed rhoncus dui risus sit amet sapien.',
 			price: 4500,
 		},
 		{
@@ -99,11 +102,20 @@ export default function ProductList() {
 		},
 	];
 
-	const [productModal, setProductModal] = useState(undefined as Product | undefined)
+	const [ productModal, setProductModal ] = useState(undefined as Product | undefined);
+	const widths = [ 1, 3, 1, 2, 1, 2, 2, 3, 1, 1, 1, 2, 1, 2, 1 ];
+
+	const getWindowDimensions = () => {
+		const { innerWidth: width, innerHeight: height } = window;
+		return {
+			width,
+			height,
+		};
+	}
 
 	return (
 		<React.Fragment>
-			<Modal product={productModal} hideFunction={setProductModal}/>
+			<Modal product={productModal} hideFunction={setProductModal} />
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark mt-3 mb-5">
 				<div className="container">
 					<span className="navbar-brand">Categories:</span>
@@ -149,21 +161,33 @@ export default function ProductList() {
 			<div className="container">
 				<section className="text-center mb-4">
 					<div className="row">
-						{products.map((p) => {
-							return (
-								<div className="col-lg-3 col-md-6 mb-4">
-									<div onClick={() => setProductModal(p)}>
-										<ProductCard product={p} />
+						{products.map((p, index) => {
+							const selectedWidth = widths[index] ? widths[index] : 1;
+							if (selectedWidth === 1 || getWindowDimensions().width < 1200) {
+								return (
+									<div className={'col-lg-3 col-md-6 mb-4'}>
+										<div onClick={() => setProductModal(p)}>
+											<ProductCard product={p} />
+										</div>
 									</div>
-								</div>
-							);
+								);
+							} else {
+								const width = `col-lg-${selectedWidth * 3}`;
+								return (
+									<div className={width + ' col-md-6 mb-4'}>
+										<div onClick={() => setProductModal(p)}>
+											<ProductCardHorizontal product={p} />
+										</div>
+									</div>
+								);
+							}
 						})}
 					</div>
-					<div className="row">
-						<div className="col">
-							<ProductCardHorizontal product={products[0]}/>
+					{/* <div className="row">
+						<div className="col-9">
+							<ProductCardHorizontal product={products[0]} />
 						</div>
-					</div>
+					</div> */}
 				</section>
 
 				<nav className="d-flex justify-content-center">
