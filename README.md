@@ -2,6 +2,7 @@ Needed dependencies:
 - Java 11
 - node.js min v10.18.1
 - npm min 6.13.4
+- by default works on Linux, to run it on windows remove "./" from "start:backend": "./gradlew run --continuous" in root package.json - needs to be corrected in the future
 
 How to run in development mode:
 1) From root of the project run command: npm install
